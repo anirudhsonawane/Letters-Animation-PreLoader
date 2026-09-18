@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #eeebeb;
+    --foreground: #e3dcdc;
   }
 }
 
@@ -23,4 +23,45 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #ffffff;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.home__page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.home__page h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(60px, 12vw, 180px);
+    font-weight: 700;
+    letter-spacing: -0.05em;
 }

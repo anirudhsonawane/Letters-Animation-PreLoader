@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AYUSH — Brand Reveal
 
-## Getting Started
+A minimal, cinematic brand reveal experience for **Ayush Pharma & Engineering**, built with Next.js, React, TypeScript and GSAP.
 
-First, run the development server:
+The project currently focuses on the opening visual experience — a custom `AYUSH` preloader with character-based transitions, GSAP Flip animations and a blue curtain reveal.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✦ Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The opening sequence is designed around the AYUSH wordmark.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The experience begins with:
 
-## Learn More
+- A full-screen blue visual background
+- Large `AYUSH` typography
+- Individual character-based animation
+- GSAP Flip-powered layout transitions
+- A controlled `S → U` horizontal movement
+- A smooth blue curtain reveal
+- A black Home page underneath
+- Responsive typography for mobile devices
 
-To learn more about Next.js, take a look at the following resources:
+The final `AYUSH` wordmark remains visually positioned as the foundation for the upcoming Home page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✦ Current Experience
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+             AYUSH
+                ↓
+       Character Animation
+                ↓
+          Layout Reveal
+                ↓
+             S → U
+                ↓
+        Blue Curtain Reveal
+                ↓
+          Black Home Page
+                ↓
+             AYUSH
