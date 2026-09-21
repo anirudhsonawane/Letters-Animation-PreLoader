@@ -1,0 +1,993 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+);
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+body {
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  background: #0a0a0a;
+
+  overflow: hidden;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+.p10-root {
+  position: relative;
+
+  width: 100%;
+
+  height: 100svh;
+
+  min-height: 100svh;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   PRELOADER
+========================================= */
+
+.preloader,
+.split-overlay {
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100vw;
+
+  height: 100svh;
+
+  background: #0a0a0a;
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+
+.preloader {
+  z-index: 2;
+}
+
+
+.split-overlay {
+  z-index: 1;
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+}
+
+
+/* =========================================
+   INTRO TITLE
+========================================= */
+
+.intro-title {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 100%;
+
+  text-align: center;
+}
+
+
+.intro-title h1,
+.outro-title h1 {
+  margin: 0;
+
+  text-transform: uppercase;
+
+  font-size: 6rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   OUTRO TITLE
+========================================= */
+
+.outro-title {
+  position: absolute;
+
+  top: 50%;
+
+  left:
+    calc(
+      50% + 10rem
+    );
+
+  transform:
+    translate(-50%, -50%);
+}
+
+
+/* =========================================
+   SPLIT TEXT
+========================================= */
+
+.intro-title .char,
+.outro-title .char,
+.card .char {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+}
+
+
+.intro-title .char,
+.outro-title .char {
+  margin-top: 0.75rem;
+}
+
+
+.intro-title .char span,
+.outro-title .char span,
+.tag .word {
+  position: relative;
+
+  display: inline-block;
+
+  transform:
+    translateY(-100%);
+
+  will-change: transform;
+}
+
+
+.card .char span {
+  position: relative;
+
+  display: inline-block;
+
+  transform:
+    translateY(100%);
+
+  will-change: transform;
+}
+
+
+.intro-title .first-char {
+  transform-origin:
+    top left;
+}
+
+
+/* =========================================
+   TAG OVERLAY
+========================================= */
+
+.tags-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+
+  height: 100svh;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  color: #5a5a5a;
+}
+
+
+.tag {
+  position: absolute;
+
+  width: max-content;
+
+  overflow: hidden;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+
+.tag p {
+  margin: 0;
+}
+
+
+/* =========================================
+   TAG POSITIONS
+========================================= */
+
+.tag-1 {
+  top: 15%;
+
+  left: 15%;
+}
+
+
+.tag-2 {
+  bottom: 15%;
+
+  left: 25%;
+}
+
+
+.tag-3 {
+  right: 15%;
+
+  bottom: 30%;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 100svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  clip-path:
+    polygon(
+      0 48%,
+      0 48%,
+      0 52%,
+      0 52%
+    );
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  z-index: 0;
+}
+
+
+.hero-img img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   NAV
+========================================= */
+
+nav {
+  position: relative;
+
+  width: 100vw;
+
+  padding: 2em;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: #fff;
+
+  z-index: 2;
+}
+
+
+nav p {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+}
+
+
+nav #logo {
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 30%;
+
+  height: 70%;
+
+  background: transparent;
+
+  color: #111;
+
+  z-index: 3;
+
+  /*
+    IMPORTANT:
+
+    The card itself is transparent.
+
+    The WHITE top and bottom panels
+    create the actual card.
+
+    When they separate, only the
+    center gap exposes the hero image.
+  */
+
+  overflow: visible;
+
+  cursor: pointer;
+
+  clip-path:
+    polygon(
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%
+    );
+}
+
+
+/* =========================================
+   NORMAL CARD CONTENT
+========================================= */
+
+.card-main {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 1.1rem;
+
+  background: #fff;
+
+  z-index: 1;
+
+  /*
+    The main card remains underneath
+    the split panels.
+
+    It is NOT faded on hover.
+  */
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+.card-main-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+  height: 10px;
+  width: 100%;
+}
+
+
+.card-main-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  width: 100%;
+}
+
+
+.card-main p {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+.card-main-title {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 3rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+.card-main-link {
+  text-decoration: underline;
+
+  text-underline-offset: 4px;
+}
+
+
+/* =========================================
+   HOVER SPLIT WRAPPER
+========================================= */
+
+/*
+   IMPORTANT:
+
+   This is ALWAYS visible.
+
+   We do NOT use:
+
+   visibility: hidden
+   opacity: 0
+
+   because that was causing the
+   transparent/flickering state.
+
+   The animation is now purely based
+   on the physical movement of the
+   two white halves.
+*/
+
+.card-hover {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  visibility: visible;
+
+  opacity: 1;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   HOVER HALF
+========================================= */
+
+.card-hover-half {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 50%;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  will-change: transform;
+
+  transition:
+    transform 0.55s
+    cubic-bezier(
+      0.8,
+      0,
+      0.3,
+      1
+    );
+}
+
+
+/* =========================================
+   TOP HALF
+========================================= */
+
+.card-hover-top {
+  top: 0.8px;
+
+  transform:
+    translateY(0);
+
+  clip-path:
+    inset(
+      0
+      0
+      0
+      0
+    );
+}
+
+
+/* =========================================
+   BOTTOM HALF
+========================================= */
+
+.card-hover-bottom {
+  bottom: 0;
+
+  transform:
+    translateY(0);
+
+  clip-path:
+    inset(
+      0
+      0
+      0
+      0
+    );
+}
+
+
+/* =========================================
+   HOVER CONTENT
+========================================= */
+
+.card-hover-content {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 1.1rem;
+
+  background: #fff;
+}
+
+
+/* =========================================
+   HOVER TITLE
+========================================= */
+
+.card-hover-title {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 3rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TOP TITLE
+========================================= */
+
+.card-hover-top
+.card-hover-title {
+  top: 100%;
+
+  transform:
+    translateY(-50%);
+}
+
+
+/* =========================================
+   BOTTOM TITLE
+========================================= */
+
+.card-hover-bottom
+.card-hover-title {
+  top: 0;
+
+  transform:
+    translateY(-50%);
+}
+
+
+/* =========================================
+   TOP INFORMATION
+========================================= */
+
+.card-hover-top
+.card-hover-info {
+  position: absolute;
+
+  top: 1.1rem;
+
+  left: 1.1rem;
+
+  right: 1.1rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+}
+
+
+.card-hover-top
+.card-hover-info p {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BOTTOM INFORMATION
+========================================= */
+
+.card-hover-bottom
+.card-hover-info {
+  position: absolute;
+
+  bottom: 1.1rem;
+
+  left: 1.1rem;
+
+  right: 1.1rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+}
+
+
+.card-hover-bottom
+.card-hover-info p {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+.card-hover-bottom
+.card-hover-info
+.view-project {
+  text-decoration: underline;
+
+  text-underline-offset: 4px;
+}
+
+
+/* =========================================
+   HOVER OPEN
+========================================= */
+
+/*
+   REFERENCE BEHAVIOR:
+
+   NORMAL:
+
+   ┌──────────────┐
+   │              │
+   │     MUR      │
+   │              │
+   └──────────────┘
+
+
+   HOVER:
+
+   ┌──────────────┐
+   │              │
+   │     MUR      │
+   └──────────────┘
+
+        IMAGE
+
+   ┌──────────────┐
+   │     MUR      │
+   │              │
+   └──────────────┘
+*/
+
+
+.card:hover
+.card-hover-top {
+  transform:
+    translateY(-15px);
+}
+
+
+.card:hover
+.card-hover-bottom {
+  transform:
+    translateY(15px);
+}
+
+
+/* =========================================
+   HOVER CLOSE
+========================================= */
+
+/*
+   There is deliberately NO separate
+   mouse-leave animation.
+
+   CSS automatically reverses:
+
+   TOP:
+   -15px → 0
+
+   BOTTOM:
+   +15px → 0
+
+   Therefore:
+
+   HOVER IN:
+   top goes UP
+   bottom goes DOWN
+
+   HOVER OUT:
+   top comes DOWN
+   bottom comes UP
+*/
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  position: relative;
+
+  width: 100vw;
+
+  padding: 2em;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: #fff;
+
+  z-index: 2;
+}
+
+
+footer p {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-family:
+    'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .intro-title h1,
+  .outro-title h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .outro-title {
+    left:
+      calc(
+        50% + 4rem
+      );
+  }
+
+
+  .intro-title .char,
+  .outro-title .char {
+    margin-top: 0.5rem;
+  }
+
+
+  .card {
+    width: 75%;
+
+    height: 70%;
+  }
+
+
+  .card-main-title,
+  .card-hover-title {
+    font-size: 2.5rem;
+  }
+
+
+  .card-main,
+  .card-hover-content {
+    padding: 0.9rem;
+  }
+
+
+  .card-main p,
+  .card-hover-info p {
+    font-size: 11px;
+  }
+
+
+  nav,
+  footer {
+    padding: 1.25rem;
+  }
+
+
+  .tag {
+    font-size: 10px;
+  }
+
+
+  /* ================================
+     MOBILE HOVER
+  ================================= */
+
+  .card:hover
+  .card-hover-top {
+    transform:
+      translateY(-12px);
+  }
+
+
+  .card:hover
+  .card-hover-bottom {
+    transform:
+      translateY(12px);
+  }
+
+}
